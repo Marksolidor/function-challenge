@@ -11,3 +11,12 @@
 //● Dentro del script agrega el evento que al hacerle click a uno de los divs, este
 //cambie de color al color seleccionado. Utiliza addEventListener para agregar
 //el evento. (3 Puntos)
+
+let box1 = document.querySelector("#box1");
+box1.style.backgroundColor = "red";
+let box2 = document.querySelector("#box2");
+box2.style.backgroundColor = "yellow";
+let box3 = document.querySelector("#box3");
+box3.style.backgroundColor = "green";
+let box4 = document.querySelector("#box4");
+box4.style.backgroundColor = "blue";
