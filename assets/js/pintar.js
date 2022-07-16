@@ -4,10 +4,18 @@
 //tener que seleccionarlo nuevamente dentro de la función (1 Punto). Para
 //obtener el puntaje debes entregar el 3 pintar.html válido funcionando en
 //conjunto con el código modificado.
+//3.2 Modifica el código anterior para poder pasarle un color como argumento a la
+//función pintar. El color debe ser verde (green) por defecto, al hacer clic en el
+//párrafo se debe pasar amarillo como color.
 
-function pintar(){
-    ele.style.backgroundColor = 'yellow'
-    }
-    ele = document.getElementById("ele1")
-    ele.addEventListener("click", pintar, ele);
-    
+function pintar(color = "green") {
+  ele.style.backgroundColor = color;
+  if (ele.style.backgroundColor != "green") {
+    ele.style.backgroundColor = "green";
+  } else {
+    ele.style.backgroundColor = "yellow";
+  }
+}
+ele = document.getElementById("ele1");
+ele.addEventListener("click", pintar);
+pintar("yellow");
