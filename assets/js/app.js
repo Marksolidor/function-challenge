@@ -20,3 +20,29 @@ let box3 = document.querySelector("#box3");
 box3.style.backgroundColor = "green";
 let box4 = document.querySelector("#box4");
 box4.style.backgroundColor = "blue";
+let colorGlobal = "";
+
+let square = document.addEventListener("keydown", function (event) {
+  console.log(event.key);
+  if (event.key === "a") {
+    colorGlobal = "yellow";
+  } else if (event.key === "s") {
+    colorGlobal = "red";
+  } else if (event.key === "d") {
+    colorGlobal = "blue";
+  } else if (event.key === "w") {
+    colorGlobal = "green";
+  }
+  changeColor(box1, colorGlobal);
+  changeColor(box2, colorGlobal);
+  changeColor(box3, colorGlobal);
+  changeColor(box4, colorGlobal);
+});
+
+let changeColor = (element, color) => {
+  element.addEventListener("click", (e) => {
+    element.style.backgroundColor = color;
+    console.log("click");
+    console.log(color);
+  });
+};
