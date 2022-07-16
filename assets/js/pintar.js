@@ -6,9 +6,8 @@
 //conjunto con el código modificado.
 
 function pintar(){
-    ele = document.getElementById("ele1")
     ele.style.backgroundColor = 'yellow'
     }
     ele = document.getElementById("ele1")
-    ele.addEventListener("click", pintar);
+    ele.addEventListener("click", pintar, ele);
     
